@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import Display from './Display'
- const Dashboard = () => {
+ 
+
+
+
+
+
+const Dashboard = () => {
     const [balls, setBalls] = useState(0);
     const [strikes, setStrikes] = useState(0);
 
@@ -14,7 +20,8 @@ import Display from './Display'
     setStrikes(0);
   }
 
-const hitScore = () => {
+
+   const hitScore = () => {
     setStrikes(0);
     setBalls(0);
 }
@@ -34,26 +41,26 @@ const foulHit = () => {
 
 
   return (
-      <div>
+      <div className='mainButtons'>
           <Display propsDisplay={balls} propsStrike={strikes} />
           <div>
               <button
-              onClick={() => setBalls(balls + 1) }
+               onClick={() => setBalls(balls + 1) }
               >Ball</button>
           </div>
           <div>
               <button
-              onClick={() => setStrikes(strikes + 1) }
+               onClick={() => setStrikes(strikes + 1) }
               >Strike</button>
           </div>
           <div>
               <button
-              onClick={foulHit}
+               onClick={foulHit}
               >Foul</button>
           </div>
           <div>
               <button
-              onClick={hitScore}
+               onClick={hitScore}
               >Hit</button>
           </div>
            
