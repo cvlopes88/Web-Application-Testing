@@ -45,21 +45,25 @@ const foulHit = () => {
           <Display propsDisplay={balls} propsStrike={strikes} />
           <div>
               <button
+              data-testid='ball-button'
                onClick={() => setBalls(balls + 1) }
               >Ball</button>
           </div>
           <div>
               <button
+              data-testid='strike-button'
                onClick={() => setStrikes(strikes + 1) }
               >Strike</button>
           </div>
           <div>
               <button
+              data-testid='foul-button'
                onClick={foulHit}
               >Foul</button>
           </div>
           <div>
               <button
+              data-testid='hit-button'
                onClick={hitScore}
               >Hit</button>
           </div>
